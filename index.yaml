@@ -3,6 +3,22 @@ entries:
   7dtd-server:
   - apiVersion: v2
     appVersion: 0.5.6
+    created: "2023-08-07T14:37:48.822650023Z"
+    description: A helm chart for running a 7 Days to Die server on Kubernetes with
+      HostPort networking
+    digest: e12c9caa9ba48368d771bb390d3115da90af378edfd0fad379a5c45ccd31e11d
+    home: https://7daystodie.com/
+    icon: https://user-images.githubusercontent.com/6136865/29045114-9ae8e510-7bc2-11e7-8487-19552001aafd.png
+    keywords:
+    - 7dtd
+    - 7 Days to Die
+    name: 7dtd-server
+    type: application
+    urls:
+    - https://github.com/vinnymeller/helm-charts/releases/download/7dtd-server-0.3.0/7dtd-server-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 0.5.6
     created: "2023-08-07T09:01:24.020578642Z"
     description: A helm chart for running a 7 Days to Die server on Kubernetes with
       HostPort networking
@@ -33,4 +49,4 @@ entries:
     urls:
     - https://github.com/vinnymeller/helm-charts/releases/download/7dtd-server-0.1.0/7dtd-server-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-07T09:01:24.020586542Z"
+generated: "2023-08-07T14:37:48.822661123Z"
