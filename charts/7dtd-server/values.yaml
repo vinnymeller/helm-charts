@@ -5,7 +5,7 @@
 
 imagePullSecrets: []
 nameOverride: ""
-fullnameOverride: ""
+fullnameOverride: "server-7dtd"
 
 serviceAccount:
   # Specifies whether a service account should be created
