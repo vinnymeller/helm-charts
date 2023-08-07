@@ -30,5 +30,6 @@ spec:
             - name: {{ .name }}
               containerPort: {{ .port }}
               protocol: {{ .protocol }}
+              hostPort: {{ .port }}
             {{- end }}
           resources: {{ toYaml .Values.resources | nindent 12 }}
