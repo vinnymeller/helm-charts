@@ -1,0 +1,11 @@
+apiVersion: v2
+name: 7dtd-server
+version: 0.1.0
+appVersion: "0.5.6"
+description: A helm chart for running a 7 Days to Die server on Kubernetes with HostPort networking
+type: application
+home: https://7daystodie.com/
+icon: https://user-images.githubusercontent.com/6136865/29045114-9ae8e510-7bc2-11e7-8487-19552001aafd.png
+keywords:
+  - 7dtd
+  - 7 Days to Die

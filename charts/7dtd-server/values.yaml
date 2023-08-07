@@ -1,0 +1,94 @@
+# Default values for 7dtd-server.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+
+image:
+  repository: vinanrra/7dtd-server
+  tag: v0.5.6
+  pullPolicy: IfNotPresent
+
+env:
+  START_MODE: "1"
+  TimeZone: "America/New_York"
+  PUID: "1000"
+  PGID: "1000"
+  VERSION: "stable"
+  TEST_ALERT: "NO"
+  UPDATE_MODS: "YES"
+  ALLOC_FIXES: "YES"
+  ALLOC_FIXES_UPDATE: "YES"
+  UNDEAD_LEGACY: "NO"
+  UNDEAD_LEGACY_VERSION: "stable"
+  UNDEAD_LEGACY_UPDATE: "NO"
+  ENZOMBIES: "NO"
+  ENZOMBIES_ADDON_SNUFKIN: "NO"
+  ENZOMBIES_ADDON_ROBELOTO: "NO"
+  ENZOMBIES_ADDON_NONUDES: "NO"
+  ENZOMBIES_UPDATE: "NO"
+  CPM: "NO"
+  CPM_UPDATE: "NO"
+  BEPINEX: "NO"
+  BEPINEX_UPDATE: "NO"
+  BACKUP: "YES"
+  MONITOR: "YES"
+
+
+ports:
+  - name: 7dtd-tcp
+    port: 26900
+    protocol: TCP
+  - name: 7dtd-udp
+    port: 26900
+    protocol: UDP
+  - name: 7dtd-udp2
+    port: 26901
+    protocol: UDP
+  - name: 7dtd-udp3
+    port: 26902
+    protocol: UDP
+  - name: 7dtd-udp4
+    port: 26903
+    protocol: UDP
+  - name: 7dtd-webadmin
+    port: 8080
+    protocol: TCP
+  - name: 7dtd-telnet
+    port: 8081
+    protocol: TCP
+  - name: 7dtd-http
+    port: 8082
+    protocol: TCP
+
+resources: {}
